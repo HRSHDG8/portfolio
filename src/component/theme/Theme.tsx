@@ -10,7 +10,7 @@ interface ITheme {
 
 const defaultTheme: ITheme = {
     theme: "light",
-    setTheme: value => {
+    setTheme: (value) => {
     }
 }
 const darkTheme = createTheme({
@@ -39,15 +39,18 @@ const ThemeContext = createContext(defaultTheme);
 export const useTheme = () => useContext(ThemeContext);
 
 export const Theme: FC = ({children}) => {
-    const [theme, setTheme] = useState<Mode>('light');
+    const [theme, setTheme] = useState<Mode>(localStorage.getItem('pro-theme') as Mode || 'light');
 
     return <ThemeContext.Provider
         value={{
             theme: theme,
-            setTheme: setTheme
+            setTheme: (theme)=>{
+                localStorage.setItem('pro-theme', theme as any)
+                setTheme(theme)
+            }
         }}>
-        <ThemeProvider theme={theme==='light'?lightTheme:darkTheme}>
-        {children}
+        <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
+            {children}
         </ThemeProvider>
     </ThemeContext.Provider>
 }

@@ -2,9 +2,10 @@ import hmac from "../../images/hmacsq.jpg";
 import React from "react";
 import {styled} from "@mui/material/styles";
 import {SpeedDial} from "@mui/material";
-import {Email, GitHub, LinkedIn, Phone} from '@mui/icons-material';
+import {Email, GitHub, LinkedIn, Phone, Settings, WbSunny, DarkMode, LightMode} from '@mui/icons-material';
 import SpeedDialIcon from '@mui/material/SpeedDialIcon';
 import SpeedDialAction from '@mui/material/SpeedDialAction';
+import {useTheme} from "../theme/Theme";
 
 const StyledSpeedDial = styled(SpeedDial)(({theme}) => ({
     '&.MuiSpeedDial-directionUp, &.MuiSpeedDial-directionLeft': {
@@ -21,14 +22,30 @@ const actions = [
     {icon: <LinkedIn/>, name: 'LinkedIn', link: 'https://www.linkedin.com/in/hmacmaheshwari/'},
     {icon: <GitHub/>, name: 'Github', link: 'https://github.com/HRSHDG8'},
     {icon: <Email/>, name: 'Email', link: 'mailto:hrshdg8@gmail.com'},
-    {icon: <Phone/>, name: 'Phone', link: 'tel:5558920234'},
+    {icon: <Phone/>, name: 'Phone', link: 'tel:8783485242'},
 ];
 
 export const Left = () => {
+    const { theme, setTheme } = useTheme();
     const handleSpeedDialClick = (link: string) => {
         window.open(link, '_blank')
     }
     return <div style={{display: "flex", flexDirection: 'column', height: '100%'}}>
+        <div style={{position: 'absolute', top: 10, right: 10}}>
+            <StyledSpeedDial
+                ariaLabel="SpeedDial playground example"
+                icon={<Settings fontSize={'small'}/>}
+                direction={'down'}
+                FabProps={{size:'small'}}
+                style={{float: 'right'}}
+            >
+                <SpeedDialAction
+                    icon={theme==='light'?<LightMode/>:<DarkMode/>}
+                    tooltipTitle={'Theme'}
+                    onClick={()=>setTheme(theme==='light'?'dark':'light')}
+                />
+            </StyledSpeedDial>
+        </div>
         <div style={{
             display: 'flex',
             justifyContent: 'center',
@@ -93,7 +110,7 @@ export const Left = () => {
             marginTop: 'auto'
         }}>
             <StyledSpeedDial
-                ariaLabel="SpeedDial playground example"
+                ariaLabel="SpeedDial"
                 icon={<SpeedDialIcon/>}
                 direction={'left'}
             >
