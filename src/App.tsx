@@ -1,6 +1,6 @@
 import React from 'react';
 import {Box, Paper} from "@mui/material";
-import {Theme} from "./component/theme/Theme";
+import {Theme, useTheme} from "./component/theme/Theme";
 import {styled} from '@mui/material/styles'
 
 import Grid from '@mui/material/Grid';
@@ -23,13 +23,7 @@ const App = () => {
         <Box>
             <Root className={classes.root}>
                 <Grid container spacing={2} style={{minHeight: '100vh'}}>
-                    <Grid item xs={12} sm={5} md={4} lg={3}
-                          style={{
-                              boxShadow: "rgb(136 136 136) 1px 0px 8px -2px",
-                              background: 'rgb(238 238 238 / 42%)'
-                          }}>
-                        <Left/>
-                    </Grid>
+                    <Left/>
                     <Grid item xs={12} sm={7} md={8} lg={9}>
                         <Right/>
                     </Grid>
