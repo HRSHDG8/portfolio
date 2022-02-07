@@ -118,18 +118,41 @@ export const Right = () => {
                     <Card>
                         <CardContent>
                             <Typography variant="h5" component="div">
-                                Deepak Tiwari
+                                Vamsi Krishna Sigarambotla
                             </Typography>
                             <Typography sx={{fontSize: 14, mb: 1.5}} color="text.secondary">
-                                SSE at upGrad | Ex JP Morgan x4
+                                Senior Software Engineer at U.S. Bank
                             </Typography>
                             <Typography variant="body2" color="text.secondary">
-                                I have worked with Harsh in the same team and I must say he is an exceptional Developer.
-                                I know him from past 7 years and can say that you bring any problem to the table ,Harsh
-                                would be the first one to pick that up and solve that for you. He has always been an
-                                over the ball thinker and has the most unique approach to solve any problem. Harsh was
-                                very well known not only in the Team but accross teams and juniors as Mr Goto Solution
-                                for any blockers. I personally have learnt a lot from him.
+                                I had privilege to work with Harsh. Harsh is one of the finest developers with excellent
+                                UI and backend skills. Harsh was a go-to-go guy for any new development and R&D. He took
+                                many initiatives to develop utilities which eases the developer life. His logical
+                                thinking and grasping power always surprises. He is highly skilled in containerizing
+                                apps, building UI frameworks, developer tooling, Spring boot, React, Angular etc(he can
+                                master anything). He has excellent problem solving and analytical skills and always
+                                delivers quality code. He has good knowledge on all aspects of software development like
+                                design, maintainability, security, performance. He is a very good asset for any team. I
+                                thoroughly recommend him
+                            </Typography>
+                        </CardContent>
+                    </Card>
+                </Grid>
+                <Grid item xs={12} sm={6} md={6} lg={4}>
+                    <Card>
+                        <CardContent>
+                            <Typography variant="h5" component="div">
+                                Deepak Girdher
+                            </Typography>
+                            <Typography sx={{fontSize: 14, mb: 1.5}} color="text.secondary">
+                                Director and Co-Founder at Cudents
+                            </Typography>
+                            <Typography variant="body2" color="text.secondary">
+                                I have worked with Harsh for over a year and I am really glad that I got that
+                                opportunity. Not only Harsh is very very technically strong but along with that he keeps
+                                a futuristic approach also in his work, which make things really easy with the time. And
+                                I remember every time I was stuck in my work, I knew there is one person I can rely
+                                upon. Apart from that He is a very happy go lucky person and gels up with the team very
+                                well and quickly. He is a type of person you would always want in your team.
                             </Typography>
                         </CardContent>
                     </Card>
@@ -158,18 +181,18 @@ export const Right = () => {
                     <Card>
                         <CardContent>
                             <Typography variant="h5" component="div">
-                                Deepak Girdher
+                                Deepak Tiwari
                             </Typography>
                             <Typography sx={{fontSize: 14, mb: 1.5}} color="text.secondary">
-                                Director and Co-Founder at Cudents
+                                SSE at upGrad | Ex JP Morgan x4
                             </Typography>
                             <Typography variant="body2" color="text.secondary">
-                                I have worked with Harsh for over a year and I am really glad that I got that
-                                opportunity. Not only Harsh is very very technically strong but along with that he keeps
-                                a futuristic approach also in his work, which make things really easy with the time. And
-                                I remember every time I was stuck in my work, I knew there is one person I can rely
-                                upon. Apart from that He is a very happy go lucky person and gels up with the team very
-                                well and quickly. He is a type of person you would always want in your team.
+                                I have worked with Harsh in the same team and I must say he is an exceptional Developer.
+                                I know him from past 7 years and can say that you bring any problem to the table ,Harsh
+                                would be the first one to pick that up and solve that for you. He has always been an
+                                over the ball thinker and has the most unique approach to solve any problem. Harsh was
+                                very well known not only in the Team but accross teams and juniors as Mr Goto Solution
+                                for any blockers. I personally have learnt a lot from him.
                             </Typography>
                         </CardContent>
                     </Card>
