@@ -1,11 +1,14 @@
 import hmac from "../../images/hmacsq.jpg";
 import React from "react";
 import {styled} from "@mui/material/styles";
-import {Grid, SpeedDial} from "@mui/material";
+import {Fab, Grid, SpeedDial, Typography} from "@mui/material";
 import {DarkMode, Email, GitHub, LightMode, LinkedIn, Phone, Settings} from '@mui/icons-material';
 import SpeedDialIcon from '@mui/material/SpeedDialIcon';
 import SpeedDialAction from '@mui/material/SpeedDialAction';
 import {useTheme} from "../theme/Theme";
+import {grey} from "@mui/material/colors";
+import {PaintedText} from "../Text/Painted";
+import { Divider } from '@mui/material';
 
 const StyledSpeedDial = styled(SpeedDial)(({theme}) => ({
     '&.MuiSpeedDial-directionUp, &.MuiSpeedDial-directionLeft': {
@@ -42,11 +45,13 @@ export const Left = () => {
                     ariaLabel="SpeedDial playground example"
                     icon={<Settings fontSize={'small'}/>}
                     direction={'down'}
-                    FabProps={{size: 'small'}}
+                    FabProps={{size: 'small', color: isLight ? 'inherit' : 'default'}}
                     style={{float: 'right'}}
                 >
                     <SpeedDialAction
-                        icon={isLight ? <LightMode/> : <DarkMode/>}
+                        FabProps={{size: 'small', color: isLight ? 'inherit' : 'default'}}
+                        icon={isLight ? <LightMode fontSize={"small"} /> :
+                            <DarkMode fontSize={"small"} />}
                         tooltipTitle={'Theme'}
                         onClick={() => setTheme(isLight ? 'dark' : 'light')}
                     />
@@ -65,16 +70,18 @@ export const Left = () => {
                              style={{maxHeight: 120, maxWidth: 120, borderRadius: '50%'}}/>
                     </div>
                     <div style={{textAlign: 'center', fontSize: '2em'}}>
-                        Harsh Maheshwari
+                        <PaintedText color={grey}>
+                            Harsh Maheshwari
+                        </PaintedText>
                     </div>
                     <div style={{textAlign: 'center', fontSize: '1em'}}>
-                        Full Stack Developer
+                        <Typography >Full Stack Developer</Typography>
                     </div>
                 </div>
             </div>
 
-            <div style={{padding: '10px 20px 0 20px'}}>
-                <hr/>
+            <div style={{padding: '10px 20px'}}>
+                <Divider/>
             </div>
             <div style={{padding: '0 20px', display: "flex", justifyContent: 'center'}}>
                 <div style={{width: 300, lineHeight: '30px'}}>
@@ -106,8 +113,8 @@ export const Left = () => {
                 </div>
             </div>
 
-            <div style={{padding: '0 20px'}}>
-                <hr/>
+            <div style={{padding: '10px 20px'}}>
+                <Divider/>
             </div>
 
 
@@ -117,7 +124,7 @@ export const Left = () => {
             }}>
                 <StyledSpeedDial
                     ariaLabel="SpeedDial"
-                    icon={<SpeedDialIcon/>}
+                    icon={<Fab><SpeedDialIcon/></Fab>}
                     direction={'left'}
                 >
                     {actions.map(({icon, name, link}) => (

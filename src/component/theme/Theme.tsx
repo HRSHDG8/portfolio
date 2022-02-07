@@ -16,8 +16,9 @@ const defaultTheme: ITheme = {
 const darkTheme = createTheme({
     palette: {
         mode: 'dark',
-        secondary: {
-            main: '#4caf50'
+        text:{
+            primary: '#66bb6a',
+            secondary: '#aed581'
         }
     },
 
@@ -32,6 +33,10 @@ const lightTheme = createTheme({
         secondary: {
             main: '#ff8a00',
         },
+        text:{
+            primary: '#2e7d32',
+            secondary: '#558b2f'
+        }
     },
 })
 

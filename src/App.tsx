@@ -24,9 +24,7 @@ const App = () => {
             <Root className={classes.root}>
                 <Grid container spacing={2} style={{minHeight: '100vh'}}>
                     <Left/>
-                    <Grid item xs={12} sm={7} md={8} lg={9}>
                         <Right/>
-                    </Grid>
                 </Grid>
             </Root>
         </Box>
