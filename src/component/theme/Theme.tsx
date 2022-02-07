@@ -16,10 +16,10 @@ const defaultTheme: ITheme = {
 const darkTheme = createTheme({
     palette: {
         mode: 'dark',
-        text:{
-            primary: '#66bb6a',
-            secondary: '#aed581'
-        }
+        // text:{
+        //     primary: '#66bb6a',
+        //     secondary: '#aed581'
+        // }
     },
 
 })
@@ -33,10 +33,10 @@ const lightTheme = createTheme({
         secondary: {
             main: '#ff8a00',
         },
-        text:{
-            primary: '#2e7d32',
-            secondary: '#558b2f'
-        }
+        // text:{
+        //     primary: '#2e7d32',
+        //     secondary: '#558b2f'
+        // }
     },
 })
 
